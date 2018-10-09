@@ -1,0 +1,51 @@
+.side-bar-content {
+  /* padding: 1em; */
+  /* margin-right: 20px; */
+  border-bottom: 2px solid #ccc;
+}
+
+.side-bar-content.tabs {
+  padding: 0;
+}
+
+div.tab-content {
+  padding: .5em !important;
+}
+
+.div.tab-content-ft {
+  padding: 0;
+}
+
+
+ /* A90F67|ZB5T45|J99IKP|C3QWCV|T9ILO7 */
+
+div.team  {
+  display: table-cell;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+div.BLUE {
+  background: #0000FF;
+  color: #fff;
+}
+
+div.ORANGE {
+  background: #FFA500;
+}
+
+div.GREEN {
+  background: #FFA500;
+}
+
+div.RED {
+  background: #FF0000;
+  color: #fff;
+}
+
+div.YELLOW {
+  background: #FFFF00;
+}

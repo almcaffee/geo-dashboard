@@ -1,0 +1,21 @@
+.map-wrapper {
+  height: 100%;
+  width: 75vw;
+  padding: 0;
+  overflow: hidden;
+}
+
+.map-wrapper .gmap {
+  height: 100vh;
+  width: 75vw;
+}
+
+app-map .offset {
+  position: absolute;
+  left: -1000px;
+}
+
+.hide-popup {
+  position: absolute;
+  left: -5000px;
+}
