@@ -4,6 +4,7 @@ import { GeonamesService, Profile } from '../../services/geonames.service';
 import * as moment from 'moment';
 import { Popup } from './popup';
 import { timer } from 'rxjs';
+import { environment } from '@environments/environment';
 
 export interface Location  {
   lat?: number;
@@ -104,7 +105,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   addPoints() {}
 
   addState(stateName: string) {
-    this.map.data.loadGeoJson('../assets/files/'+stateName+'.json');
+    this.map.data.loadGeoJson('/dashboard/assets/files/'+stateName+'.json');
     this.map.data.setStyle({
       fillOpacity: 0.05,
       strokeWeight: 2

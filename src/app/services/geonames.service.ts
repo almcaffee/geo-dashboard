@@ -49,7 +49,7 @@ export class GeonamesService {
   }
 
   getNetwork() {
-    return this.http.get<Profile[]>('../assets/files/network.json')
+    return this.http.get<Profile[]>('/dashboard/assets/files/network.json')
     .subscribe(res=> {
       this.network.next(this.generateRandomPoints(res));
     }, err=>{

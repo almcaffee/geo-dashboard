@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { APP_BASE_HREF } from '@angular/common';
+import {environment} from '../environments/environment';
 import { MatInputModule,
   MatFormFieldModule,
   MatSelectModule,
@@ -65,7 +67,7 @@ import { MatInputModule,
     MatSidenavModule,
     MatTabsModule
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: environment.base}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
