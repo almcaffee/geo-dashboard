@@ -1,0 +1,80 @@
+form {
+  padding: 25px 0;
+}
+
+.form-section {
+  margin: 25px 0;
+}
+
+/* class repeated for increased specificity */
+.mat-grid-tile .mat-form-field.mat-form-field {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* mat-error has issues https://github.com/angular/material2/issues/9007 */
+mat-form-field + mat-error {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  font-size: 75%;
+  font-weight: 700;
+}
+
+.error mat-form-field.mat-form-field .mat-form-field-flex {
+  background-color: #f7f7f9;
+}
+
+/* Force remove content area for stepper */
+.mat-horizontal-content-container {
+  display: none;
+}
+
+.mat-step-label {
+  min-width: initial !important;
+}
+
+.mat-horizontal-stepper-header-container {
+  background-color: #e3f2fd;
+}
+
+.mat-tab-label {
+    min-width: 50% !important;
+}
+
+.mat-tab-label-active {
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-width: 1px 1px 0 1px;
+  background: #f4f5f5;
+  opacity: 1;
+}
+
+.mat-expansion-panel-header-title .mat-icon {
+  margin-right: 1em;
+}
+
+app-side-bar .mat-expansion-panel-body {
+  padding: 0;
+}
+
+app-side-bar .mat-expansion-panel-header  {
+  background: #307bfb !important;
+}
+
+app-side-bar .mat-expansion-panel-header .mat-expansion-indicator::after,
+app-side-bar .mat-expansion-panel-header-title  {
+  color: #fff !important;
+}
+
+app-side-bar .mat-expansion-panel-body .mat-table {
+  box-shadow: none;
+  width: 100%;
+}
+
+app-side-bar .mat-expansion-panel-body .mat-paginator,
+app-side-bar .mat-expansion-panel-body .mat-table .mat-row:nth-of-type(odd){
+  background: #f4f5f5;
+}
+
+/* background: #5d96f8; */

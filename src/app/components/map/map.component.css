@@ -1,13 +1,19 @@
-.map-wrapper {
-  height: 100%;
-  width: 75vw;
-  padding: 0;
-  overflow: hidden;
+@media screen and (max-width:992px) {
+  .gmap {
+    width: 100vw;
+  }
 }
 
-.map-wrapper .gmap {
-  height: 100vh;
-  width: 75vw;
+@media screen and (min-width:993px) {
+  .gmap {
+    width: 75vw;
+  }
+}
+
+.gmap {
+  display: inline-block;
+  height: Calc(100vh - 100px);
+  overflow: hidden;
 }
 
 app-map .offset {

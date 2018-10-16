@@ -54,24 +54,26 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit() {}
 
   ngAfterViewInit() {
-    this.zoom = 10;
-    this.map = new google.maps.Map(this.gmapElement.nativeElement,
-    {
-      center: new google.maps.LatLng(38.869753,-77.374371),
-      zoom: this.zoom,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      gestureHandling: 'greedy',
-      maxZoom: 20,
-      minZoom: 7
-    });
-    timer(500).subscribe(()=> {
-      this.gs.getNetwork();
-      this.map.addListener('zoom_changed', ()=> {
-        this.hidePopup();
-        this.changeMarkers(this.map.getZoom());
+    if(this.gmapElement) {
+      this.zoom = 10;
+      this.map = new google.maps.Map(this.gmapElement.nativeElement,
+      {
+        center: new google.maps.LatLng(38.869753,-77.374371),
+        zoom: this.zoom,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        gestureHandling: 'greedy',
+        maxZoom: 20,
+        minZoom: 7
       });
-      this.addState('virginia');
-    });
+      timer(500).subscribe(()=> {
+        this.gs.getNetwork();
+        this.map.addListener('zoom_changed', ()=> {
+          this.hidePopup();
+          this.changeMarkers(this.map.getZoom());
+        });
+        this.addState('virginia');
+      });
+    }
   }
 
   ngOnDestroy() {

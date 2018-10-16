@@ -15,6 +15,7 @@ export class SideBarComponent implements OnInit {
 
   profile: Profile;
   network: Profile[] = [];
+  panelOpenState: boolean;
 
   displayedColumns: string[] = ['id', 'name', 'date', 'team', 'map'];
   dataSource: MatTableDataSource<object>;
