@@ -21,6 +21,8 @@ export interface Profile {
 export class GeonamesService {
 
   GEO_API_URL = 'http://api.geonames.org/searchJSON?username=almcaffee';
+  API_URL = 'http://localhost:8000/api/';
+
   connections = new Subject<any>();
   connections$ = this.connections.asObservable();
   filter = new Subject<any>();
@@ -49,8 +51,9 @@ export class GeonamesService {
   }
 
   getNetwork() {
-    return this.http.get<Profile[]>('/dashboard/assets/files/network.json')
+    return this.http.get<Profile[]>(this.API_URL+'user/network')
     .subscribe(res=> {
+      // console.log(res)
       this.network.next(this.generateRandomPoints(res));
     }, err=>{
       this.handleError(err);
@@ -59,8 +62,9 @@ export class GeonamesService {
   }
 
   getState(stateName: string) {
-    return this.http.get('../assets/files/'+stateName+'.json')
+    return this.http.get(this.API_URL+'user/'+stateName)
     .subscribe(res=> {
+      // console.log(res)
       this.state.next(JSON.stringify(res));
     }, err=>{
       this.handleError(err);
@@ -118,10 +122,6 @@ generateRandomPoint(center: any, radius: number) {
   return {'lat': y+y0, 'lng': xp+x0};
 }
 
-
-// Usage Example.
-// Generates 100 points that is in a 1km radius from the given lat and lng point.
-// let randomGeoPoints = generateRandomPoints({'lat':24.23, 'lng':23.12}, 1000, 100)
 
   handleError(err: any) {
     console.log(err)

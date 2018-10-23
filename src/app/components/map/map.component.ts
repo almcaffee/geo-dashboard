@@ -50,6 +50,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     this.gs.points$.subscribe(data=> console.log(data));
     this.gs.network$.subscribe(network=> this.setNetwork(network));
     this.gs.filter$.subscribe(filter=> this.getLocations(filter));
+    this.gs.state$.subscribe(filter=> this.getLocations(filter));
   }
 
   ngOnInit() {}
@@ -72,7 +73,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
           this.hidePopup();
           this.changeMarkers(this.map.getZoom());
         });
-        this.addState('virginia');
+        this.gs.getState('virginia');
       });
     }
   }
@@ -104,8 +105,9 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   addPoints() {}
 
-  addState(stateName: string) {
-    this.map.data.loadGeoJson('/dashboard/assets/files/'+stateName+'.json');
+  addState(stateJson: any) {
+    console.log(stateJson)
+    this.map.data.loadGeoJson(stateJson);
     this.map.data.setStyle({
       fillOpacity: 0.05,
       strokeWeight: 2
@@ -322,6 +324,7 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   setNetwork(nw: Profile[]) {
+    console.log(nw)
     this.network = nw;
     this.profile = this.network[0];
     this.getLocations();
