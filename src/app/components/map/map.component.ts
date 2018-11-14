@@ -340,8 +340,8 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
     name.innerText = this.profile.name;
     let date = document.getElementById('profile-date');
     img.innerText = moment(this.profile.date).format('M/d/Y');
-    let desc = document.getElementById('profile-text');
-    desc.innerText = this.profile.description;
+    // let desc = document.getElementById('profile-text');
+    // desc.innerText = this.profile.description;
     let close = document.getElementById('profile-close');
     close.addEventListener('click', ()=> this.hidePopup());
   }

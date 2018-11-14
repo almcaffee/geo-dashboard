@@ -11,6 +11,10 @@ app-root {
   width: 100vw;
 }
 
+.pad-0 {
+  padding: 0px;
+  margin: 0px;
+}
 .gm-style div div div div img {
   /* border-radius: 25px !important;
   border: 2px dotted #307bfb !important; */

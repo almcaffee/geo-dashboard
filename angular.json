@@ -13,27 +13,50 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../geo-server/static/public/dashboard",
+            "outputPath": "../geo-server/dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "../shared-assets/",
+                "output": "./assets"
+              }
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/assets/css/materials-theme.css",
-              "src/assets/css/materials-override.css",
+              "../shared-assets/packages/bootstrap/css/bootstrap.min.css",
+              "../shared-assets/icon/themify-icons/themify-icons.css",
+              "../shared-assets/icon/icofont/css/icofont.css",
+              "../shared-assets/pages/menu-search/css/component.css",
+              "../shared-assets/css/style.css",
+              "../shared-assets/css/jquery.mCustomScrollbar.css",
               "src/assets/css/popup.css",
-              "src/assets/css/infowindow.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "../shared-assets/packages/jquery/js/jquery.min.js",
+              "../shared-assets/packages/jquery-ui/js/jquery-ui.min.js",
+              "../shared-assets/packages/popper.js/js/popper.min.js",
+              "../shared-assets/packages/bootstrap/js/bootstrap.min.js",
+              "../shared-assets/packages/jquery-slimscroll/js/jquery.slimscroll.js",
+              "../shared-assets/packages/modernizr/js/modernizr.js",
+              "../shared-assets/pages/widget/amchart/amcharts.min.js",
+              "../shared-assets/pages/widget/amchart/serial.min.js",
+              "../shared-assets/packages/chart.js/js/Chart.js",
+              "../shared-assets/packages/i18next/js/i18next.min.js",
+              "../shared-assets/packages/i18next-xhr-backend/js/i18nextXHRBackend.min.js",
+              "../shared-assets/packages/i18next-browser-languagedetector/js/i18nextBrowserLanguageDetector.min.js",
+              "../shared-assets/packages/jquery-i18next/js/jquery-i18next.min.js",
+              "../shared-assets/pages/dashboard/custom-dashboard.js",
+              "../shared-assets/js/SmoothScroll.js",
+              "../shared-assets/js/pcoded.min.js",
+              "../shared-assets/js/demo-12.js",
+              "../shared-assets/js/jquery.mCustomScrollbar.concat.min.js",
+              "../shared-assets/js/script.min.js"
             ]
           },
           "configurations": {

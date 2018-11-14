@@ -9,5 +9,5 @@ export class SubscriptionService {
   locations = new Subject<any>();
   locations$ = this.locations.asObservable();
 
-  constructor() { }
+  constructor() { } 
 }

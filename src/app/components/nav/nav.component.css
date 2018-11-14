@@ -1,0 +1,11 @@
+.header-navbar .navbar-wrapper .navbar-container .nav-right .user-profile i {
+    font-size: inherit;
+}
+
+.profile-notification li+li {
+  border-top: 1px solid #f1f1f1 !important;
+}
+
+.profile-notification li:hover {
+  background: #f1f1f1 !important;
+}

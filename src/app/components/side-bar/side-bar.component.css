@@ -1,10 +1,10 @@
 .side-bar-content {
   /* padding: 1em; */
   /* margin-right: 20px; */
-  border-bottom: 2px solid #ccc;
+  /* border-bottom: 2px solid #ccc; */
 }
 
-.side-bar-content.tabs {
+/* .side-bar-content.tabs {
   padding: 0;
 }
 
@@ -14,19 +14,19 @@ div.tab-content {
 
 .div.tab-content-ft {
   padding: 0;
-}
+} */
 
 
  /* A90F67|ZB5T45|J99IKP|C3QWCV|T9ILO7 */
 
-div.team  {
+/* div.team  {
   display: table-cell;
   height: 20px;
   width: 20px;
   border-radius: 10px;
   vertical-align: middle;
   text-align: center;
-}
+} */
 
 div.BLUE {
   background: #0000FF;

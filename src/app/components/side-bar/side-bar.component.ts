@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } fr
 import { GeonamesService, Profile } from '../../services/geonames.service';
 import * as moment from 'moment';
 import { timer } from 'rxjs';
-import { MatPaginator, MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-side-bar',
@@ -11,14 +10,9 @@ import { MatPaginator, MatTableDataSource } from '@angular/material';
 })
 export class SideBarComponent implements OnInit {
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
   profile: Profile;
   network: Profile[] = [];
   panelOpenState: boolean;
-
-  displayedColumns: string[] = ['id', 'name', 'date', 'team', 'map'];
-  dataSource: MatTableDataSource<object>;
 
   constructor(private gs: GeonamesService, private el: ElementRef) {
     this.gs.network$.subscribe(network=> this.setNetwork(network));
@@ -28,10 +22,6 @@ export class SideBarComponent implements OnInit {
   }
 
   setNetwork(nw: Profile[]) {
-    this.dataSource = new MatTableDataSource(nw);
-    timer(200).subscribe(()=>  {
-      this.dataSource.paginator = this.paginator;
-    });
   }
 
   filterMap(filter: any) {

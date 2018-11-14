@@ -1,31 +1,31 @@
 @media screen and (max-width:992px) {
-  app-map {
+  /* app-map {
     width: 100vw;
   }
   .landscape {
     display: none;
-  }
+  } */
 }
 
 @media screen and (min-width:993px) {
-  app-map {
+  /* app-map {
     width: 75vw;
   }
   .portrait {
     display: none;
-  }
+  } */
 }
 
 
-app-map {
+/* app-map {
   display: inline-block;
   height: Calc(100vh - 100px);
   max-height: 100%;
   max-width: 100%;
   overflow: hidden;
-}
+} */
 
-app-side-bar {
+/* app-side-bar {
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -33,24 +33,24 @@ app-side-bar {
   max-width: 100%;
   overflow-y: auto;
   background: #f4f5f5;
-}
+} */
 
 nav {
-  max-height: 56px;
+  /* max-height: 56px; */
   /* overflow: hidden; */
 }
 
-footer {
+/* footer {
   height: 44px;
   max-height: 44px;
   overflow: hidden;
   background: #eee;
-}
+} */
 
-.navbar-default {
+/* .navbar-default {
   background: #232f3e;
   color: #eee;
-}
+} */
 
 .pad-0 {
   padding: 0px;

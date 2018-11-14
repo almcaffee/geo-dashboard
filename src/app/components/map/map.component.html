@@ -1,30 +1,46 @@
-<div class="map-wrapper">
-  <div #gmap class="gmap"></div>
-</div>
-<div #content id="content" class="offset">
-  <div class="profile">
-    <div class="flex-profile">
-      <div id="profile-img"><img id="profile-face" src="http://ollietinsley.com/img/faces/face-12.jpg" alt="Porcelain Factory of Vista Alegre" height="115" width="83"></div>
-      <div id="profile-content">
-        <div id="profile-name">
-          <div id="profile-header">Name</div>
-      		<div id="profile-close" matTooltip="Close" [matTooltipPosition]="'above'" aria-label="Close Profile"><mat-icon>clear</mat-icon></div>
-      	</div>
-        <div id="profile-desc">
-          <div id="profile-date">10/04/2018</div>
-          <div id="profile-text">magnis dis parturient montes, nascetur ridiculus mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis</div>
-          <address id="profile-addr">
-        		VISTA ALEGRE ATLANTIS, SA<br>
-        		3830-292 Ílhavo - Portugal
-      	  </address>
-          <div id="profile-contact">
-            Phone. +351 234 320 600<br>
-            e-mail: geral@vaa.pt<br>
-            www: www.myvistaalegre.com
+<div class="page-body">
+    <div class="row">
+        <div class="col-sm-12">
+          <div class="card">
+            <div class="card-block pad-0">
+              <div #gmap class="gmap"></div>
+            </div>
+          </div>
+          <div>
+          <div #content id="content" class="offset">
+              <div class="card pad-0">
+                <div id="profile-close"></div>
+                <div class="card-block pad-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover pad-0">
+                            <tbody>
+                                <tr>
+                                    <td><a><img id="profile-face" class="img-rounded" src="assets/images/widget/user-3.png" alt="chat-user"></a>
+                                    </td>
+                                    <td>
+                                        <h6 id="profile-header">Josephin John</h6>
+                                        <p id="profile-org">Lorem ipsum dolor</p>
+                                        <p id="profile-group">Lorem ipsum dolor</p>
+                                    </td>
+                                    <td>
+                                      <p class="review-date">
+                                        Added: <span id="profile-date"></span>
+                                      </p>
+                                      <a><i class="icofont icofont-star f-18 text-c-blue"></i></a>
+                                      <a><i class="icofont icofont-star f-18 text-default"></i></a>
+                                      <a><i class="icofont icofont-star f-18 text-default"></i></a>
+                                      <a><i class="icofont icofont-star f-18 text-default"></i></a>
+                                      <a><i class="icofont icofont-star f-18 text-default"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              </div>
+              <div class="pop-btm"></div>
           </div>
         </div>
-        <div class="profile-bottom-gradient"></div>
       </div>
     </div>
-  </div>
 </div>
